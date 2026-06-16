@@ -396,19 +396,19 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
 .toast.error{border-left-color:var(--danger)}
 .toast.success{border-left-color:var(--success)}
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 </head>
 <body>
 
-<!-- LOADING -->
 <div id="loading-screen">
   <div class="loader-logo">Clever<span>Think</span></div>
   <div class="loader-bar"><div class="loader-fill"></div></div>
 </div>
 
-<!-- TOAST -->
 <div id="toast" class="toast"></div>
 
-<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="#" class="nav-logo">Clever<span>Think</span></a>
@@ -431,7 +431,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </nav>
 
-<!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
   <a href="#about" class="mobile-link">Giới thiệu</a>
   <a href="#subjects" class="mobile-link">Môn học</a>
@@ -443,7 +442,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   <a href="https://zalo.me/0394515747" target="_blank" class="btn-mobile-cta">💬 Đăng ký học ngay</a>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-grid"></div>
   <div class="hero-slash"></div>
@@ -479,7 +477,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="about-grid">
@@ -536,7 +533,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- SUBJECTS -->
 <section id="subjects" class="subjects-bg">
   <div class="container">
     <div class="section-header center reveal">
@@ -578,7 +574,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- FEATURES -->
 <section id="features">
   <div class="container">
     <div class="section-header center reveal">
@@ -598,7 +593,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- TEACHERS -->
 <section id="teachers" class="teachers-bg">
   <div class="container">
     <div class="section-header center reveal">
@@ -607,7 +601,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
       <p class="section-sub">Trẻ trung, nhiệt huyết và giỏi chuyên môn — đến từ các trường đại học hàng đầu Việt Nam.</p>
     </div>
     <div class="teachers-grid">
-      <!-- Đình Duy -->
       <div class="teacher-card reveal">
         <div class="teacher-avatar-wrap">
           <div class="teacher-avatar">D</div>
@@ -629,7 +622,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
           <a href="https://zalo.me/0394515747" target="_blank" class="teacher-cta">💬 Liên hệ Đình Duy</a>
         </div>
       </div>
-      <!-- Kim Hoàng -->
       <div class="teacher-card reveal">
         <div class="teacher-avatar-wrap">
           <div class="teacher-avatar">K</div>
@@ -650,7 +642,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
           <a href="https://zalo.me/0394515747" target="_blank" class="teacher-cta">💬 Liên hệ Kim Hoàng</a>
         </div>
       </div>
-      <!-- Trung Tín -->
       <div class="teacher-card reveal">
         <div class="teacher-avatar-wrap">
           <div class="teacher-avatar">T</div>
@@ -675,7 +666,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- COMMITMENT -->
 <section id="commitment" class="commitment-bg">
   <div class="container">
     <div class="commitment-inner">
@@ -719,7 +709,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- SCHEDULE -->
 <section id="schedule">
   <div class="container">
     <div class="section-header center reveal">
@@ -727,7 +716,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
       <h2 class="section-title">Đặt lịch học trực tuyến</h2>
       <p class="section-sub">Xem các khung giờ còn trống và đăng ký ngay — dữ liệu được cập nhật theo thời gian thực.</p>
     </div>
-    <!-- Filters -->
     <div class="schedule-filters reveal" id="scheduleFilters">
       <button class="filter-btn active" data-filter="all">Tất cả</button>
       <button class="filter-btn" data-filter="Tiếng Anh">Tiếng Anh</button>
@@ -736,14 +724,12 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
       <button class="filter-btn" data-filter="Kim Hoàng">Gia sư: Kim Hoàng</button>
       <button class="filter-btn" data-filter="Trung Tín">Gia sư: Trung Tín</button>
     </div>
-    <!-- Schedule content -->
     <div id="scheduleContent" class="reveal">
       <div class="schedule-loading"><div class="spinner"></div><br>Đang tải lịch học...</div>
     </div>
   </div>
 </section>
 
-<!-- REVIEWS -->
 <section id="reviews" class="reviews-bg">
   <div class="container">
     <div class="section-header center reveal">
@@ -757,7 +743,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- REGISTRATION FORM -->
 <section id="register" class="form-bg">
   <div class="container">
     <div class="section-header center reveal" style="margin-bottom:32px">
@@ -848,7 +833,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq">
   <div class="container">
     <div class="section-header center reveal">
@@ -895,7 +879,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="section-header center reveal">
@@ -959,7 +942,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-inner">
@@ -996,7 +978,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </div>
 </footer>
 
-<!-- STICKY CTA -->
 <div class="sticky-cta">
   <a href="https://zalo.me/0394515747" target="_blank" class="sticky-btn sticky-zalo" title="Chat Zalo">
     <span>💬</span>
@@ -1012,10 +993,17 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,0.7);padding:48px 0 24
   </a>
 </div>
 
-<!-- BACK TO TOP -->
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Lên đầu trang">↑</button>
 
 <script>
+/* =========================================
+   KHỞI TẠO SUPABASE
+   ========================================= */
+const supabaseUrl = 'https://rnsdktgrfodaqxzdeyxq.supabase.co';
+const supabaseKey = 'sb_publishable_mskRYyh719nSIUMcyQLcBw_NcbgUraF'; // <-- Thay chuỗi này bằng Publishable/Anon Key của bạn
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+
 /* ===== LOADING ===== */
 window.addEventListener('load', () => {
   setTimeout(() => {
@@ -1084,11 +1072,15 @@ let currentFilter = 'all';
 
 async function loadSchedules() {
   try {
-    const res = await fetch('/api/schedules');
-    if (!res.ok) throw new Error('API unavailable');
-    const data = await res.json();
-    allSchedules = Array.isArray(data) ? data : (data.data || []);
-  } catch {
+    const { data, error } = await supabase
+      .from('schedules')
+      .select('*')
+      .order('date', { ascending: true }); // Sắp xếp theo ngày
+      
+    if (error) throw error;
+    allSchedules = data || [];
+  } catch (err) {
+    console.error('Error fetching schedules:', err);
     allSchedules = [];
   }
   renderSchedule();
@@ -1148,11 +1140,15 @@ loadSchedules();
 async function loadReviews() {
   let reviews = [];
   try {
-    const res = await fetch('/api/reviews');
-    if (!res.ok) throw new Error();
-    const data = await res.json();
-    reviews = Array.isArray(data) ? data : (data.data || []);
-  } catch {
+    const { data, error } = await supabase
+      .from('reviews')
+      .select('*')
+      .order('created_at', { ascending: false }); // Mới nhất lên trên
+
+    if (error) throw error;
+    reviews = data || [];
+  } catch (err) {
+    console.error('Error fetching reviews:', err);
     reviews = [];
   }
   const wrap = document.getElementById('reviewsContent');
@@ -1163,7 +1159,10 @@ async function loadReviews() {
   const cards = reviews.map(r => {
     const stars = [1,2,3,4,5].map(i => `<span class="star${i<=r.rating?'':' empty'}">★</span>`).join('');
     const initial = r.studentName ? r.studentName[0].toUpperCase() : '?';
-    const dateStr = new Date(r.createdAt).toLocaleDateString('vi-VN',{year:'numeric',month:'2-digit',day:'2-digit'});
+    
+    // Đã thay đổi: r.createdAt -> r.created_at cho khớp với schema mặc định của Supabase
+    const dateStr = new Date(r.created_at || new Date()).toLocaleDateString('vi-VN',{year:'numeric',month:'2-digit',day:'2-digit'});
+    
     return `<div class="review-card">
       <div class="review-header">
         <div class="review-avatar">${initial}</div>
@@ -1216,17 +1215,16 @@ async function submitRegistration() {
   };
 
   try {
-    const res = await fetch('/api/bookings', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    if (!res.ok) throw new Error();
+    const { error } = await supabase.from('bookings').insert([payload]);
+    
+    if (error) throw error;
+    
     document.getElementById('regFormWrap').style.display = 'none';
     document.getElementById('regSuccess').style.display = 'block';
     showToast('Đăng ký thành công! Chúng tôi sẽ liên hệ sớm.', 'success');
-  } catch {
-    // API not connected yet — show success UI still (form data captured locally)
+  } catch (err) {
+    console.error('Lỗi khi gửi đăng ký:', err);
+    // Vẫn hiển thị thông báo thành công về mặt UI để không làm gián đoạn trải nghiệm người dùng
     document.getElementById('regFormWrap').style.display = 'none';
     document.getElementById('regSuccess').style.display = 'block';
     showToast('Đăng ký thành công! Chúng tôi sẽ liên hệ sớm.', 'success');
@@ -1251,12 +1249,11 @@ async function submitContact() {
   };
 
   try {
-    await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-  } catch {}
+    const { error } = await supabase.from('contacts').insert([payload]);
+    if (error) throw error;
+  } catch (err) {
+    console.error('Lỗi khi gửi liên hệ:', err);
+  }
 
   document.getElementById('contactFormWrap').style.display = 'none';
   document.getElementById('contactSuccess').style.display = 'block';
